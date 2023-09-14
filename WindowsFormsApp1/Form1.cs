@@ -16,5 +16,28 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Especialidades oEspecialidad = new Especialidades();
+            oEspecialidad.Especialidad = Convert.ToInt32(txtEspecialidad.Text);
+            oEspecialidad.Nombre = txtNombre.Text;
+
+            
+            oEspecialidad.grabar();
+
+
+            txtEspecialidad.Clear();
+            txtNombre.Clear();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Especialidades oEspecialidad = new Especialidades();
+            oEspecialidad.Especialidad = Convert.ToInt32(txtEspecialidad.Text);
+            oEspecialidad.borrar();
+            txtEspecialidad.Clear();
+
+        }
     }
 }
